@@ -2,8 +2,8 @@
 /**                                                                                      **/
 /**  EDDA2 - Estrutura de Dados - TADS - 1o. sem. 2022                                   **/
 /**  Nome do aluno : Wesley Faveron de Almeida                                           **/
-/**  Matricula : SP3082407  Curso : TECNOLOGIA EM ANÁLISE E DESENVOLVIMENTO DE SISTEMAS  **/
-/**  Exercícios de ordenação                                                             **/
+/**  Matricula : SP3082407  Curso : TECNOLOGIA EM ANÃLISE E DESENVOLVIMENTO DE SISTEMAS  **/
+/**  ExercÃ­cios de ordenaÃ§Ã£o                                                             **/
 /**                                                                                      **/
 /******************************************************************************************/
 
@@ -26,11 +26,11 @@ int main()
     double vetorValoresAleatorios[TAMMAXVET];
     char codigo;
 
-    printf("O programa a seguir ordena %d valores aleatórios\n", TAMMAXVET);
+    printf("O programa a seguir ordena %d valores aleatÃ³rios\n", TAMMAXVET);
     printf("\nTecle uma tecla para gerar os %d valores\n", TAMMAXVET);
     getch();
 
-    printf("\nOs valores gerados são: \n\n");
+    printf("\nOs valores gerados sÃ£o: \n\n");
     for(i = 0; i < TAMMAXVET; i++)
         vetorValoresAleatorios[i] = rand()%(MAXVAL + 1);
     imprimi_vetor(vetorValoresAleatorios);
@@ -39,27 +39,27 @@ int main()
     printf("\t b - Bubble sort\n"
            "\t s - Selection sort\n"
            "\t i - Insertion sort\n");
-    printf("Código: ");fflush(stdin); codigo = getchar();
+    printf("CÃ³digo: ");fflush(stdin); codigo = getchar();
 
     switch (codigo)
     {
         case 'b' :
             bubble_sort(vetorValoresAleatorios);
-            printf("\nValores depois da ordenação por BUBBLE SORT: \n\n");
+            printf("\nValores depois da ordenaÃ§Ã£o por BUBBLE SORT: \n\n");
             imprimi_vetor(vetorValoresAleatorios);
             break;
         case 's' :
             selection_sort(vetorValoresAleatorios);
-            printf("\nValores depois da ordenação por SELECTION SORT: \n\n");
+            printf("\nValores depois da ordenaÃ§Ã£o por SELECTION SORT: \n\n");
             imprimi_vetor(vetorValoresAleatorios);
             break;
         case 'i' :
             insertion_sort(vetorValoresAleatorios);
-            printf("\nValores depois da ordenação por INSERTION SORT: \n\n");
+            printf("\nValores depois da ordenaÃ§Ã£o por INSERTION SORT: \n\n");
             imprimi_vetor(vetorValoresAleatorios);
             break;
         default  :
-            printf("\nCódigo ( %c )inválido.\n", codigo);
+            printf("\nCÃ³digo ( %c )invÃ¡lido.\n", codigo);
     }
     return 0;
 }
